@@ -1,0 +1,62 @@
+Question 2 - 
+
+Description: Write a program in Python to print the number of unique letters in a string. Only new letters from the string should be counted and not duplicates.
+
+                                  
+
+Input : string1 = "India"
+
+Output : uniqueLetters = i,n,d,a
+
+
+Input : string1 = "Dedication"
+
+Output : uniqueLetters = d,e,i,c,a,t,o,n
+
+soluton:
+
+
+l1=input("enter string: ");
+l1=l1.lower()
+l2=[]
+for i  in l1:
+    if i not in l2:
+        l2.append(i)
+print("Unique letters : ",end="")
+for i in l2:
+    print(i,end="")
+    if (i!=l2[len(l2)-1]):
+        print(",",end="")
+        
+        
+
+Question 1 - 
+
+Description - Create a small command-line program in Python to calculate the total invoice amount for the below purchases - 
+
+Book - Introduction to Python Programming : Rs 499.00
+
+Book - Python Libraries Cookbook : Rs. 855.00
+
+Book - Data Science in Python : Rs. 645.00
+
+
+Taxes and additional charges are described as details - 
+
+GST : 12%
+
+Delivery Charges : Rs. 250.00
+
+solution:
+
+book1=int(input("Enter no.of books of Introduction to Python Programming : "))
+book2=int(input("Enter no.of books of Python Libraries Cookbook : "))
+book3=int(input("Enter no.of books of Data Science in Python : "))
+b1=book1*499.0
+b2=book2*855.0
+b3=book3*645.0
+sum=b1+b2+b3
+gst=(0.12*sum)
+delivery_charge=250
+total_cost=sum+gst+delivery_charge
+print("Total Cost : ",total_cost)
